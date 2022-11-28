@@ -1,15 +1,30 @@
 public class Employee {
-    private final String name;
-    private final int department;
-    private final int salary;
+    private  String name;
+    private  String surname;
+    private  String patronymic;
+    private int department;
+    private int salary;
+    private static int counter = 0;
+    private int id;
 
-    public Employee(String name, int department, int salary) {
+    public Employee(String name, String surname, String patronymic, int department, int salary) {
         this.name = name;
+        this.surname = surname;
+        this.patronymic = patronymic;
         this.department = department;
         this.salary = salary;
+        counter++;
+        id = counter;
+
     }
     public String getName() {
         return name;
+    }
+    public String getSurname() {
+        return surname;
+    }
+    public String getPatronymic() {
+        return patronymic;
     }
     public int getDepartment() {
         return department;
@@ -17,5 +32,18 @@ public class Employee {
     public int getSalary() {
         return salary;
     }
+    public void setDepartment(int department) {
+        this.department = department;
+    }
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+    @Override
+    public String toString() {
+        return id + " " + surname + " " + name + " " + patronymic + " " + department + " " + salary ;
+    }
 
+    public int getId() {
+        return id;
+    }
 }
