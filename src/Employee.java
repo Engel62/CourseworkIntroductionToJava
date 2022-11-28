@@ -1,7 +1,7 @@
 public class Employee {
-    private  String name;
-    private  String surname;
-    private  String patronymic;
+    private final String name;
+    private final String surname;
+    private final String patronymic;
     private int department;
     private int salary;
     private static int counter = 0;
@@ -15,7 +15,6 @@ public class Employee {
         this.salary = salary;
         counter++;
         id = counter;
-
     }
     public String getName() {
         return name;
@@ -42,8 +41,8 @@ public class Employee {
     public String toString() {
         return id + " " + surname + " " + name + " " + patronymic + " " + department + " " + salary ;
     }
-
     public int getId() {
         return id;
     }
+
 }
