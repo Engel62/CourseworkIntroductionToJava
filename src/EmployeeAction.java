@@ -45,6 +45,10 @@ public class EmployeeAction {
         System.out.println("Cредняя зарплата " + averageSalary(employee));
     }
     public static void printNameSurnamePatronymic(Employee[]employee) {
+        for (Employee value : employee) {
+            System.out.println(value.getSurname() + " " + value.getName() + " " + value.getPatronymic());
+        }
+
     }
 }
 

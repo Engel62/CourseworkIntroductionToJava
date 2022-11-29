@@ -19,6 +19,7 @@ public class Main {
         EmployeeAction.maxSalary(employee);
         EmployeeAction.minSalary(employee);
         EmployeeAction.printAverageSalary(employee);
+        EmployeeAction.printNameSurnamePatronymic(employee);
 
     }
 }
