@@ -12,9 +12,13 @@ public class Main {
         employee [6] = new Employee("Стаислав", "Егин", "Евгеньевич",4,29554);
         employee [7] = new Employee("Артем", "Сидоров", "Сергеевич",4,30500);
         employee [8] = new Employee("Игорь", "Андреев", "Петрович",5,15000);
-        employee [9] = new Employee("Владислав", "Терешин", "Александрович",5,65000);
+        employee [9] = new Employee("Владислав", "Терешин", "Александрович",5,65300);
 
-        Arrays.stream(employee).forEach(System.out::println);
+        EmployeeAction.printAllEmployees(employee);
+        EmployeeAction.printSum(employee);
+        EmployeeAction.maxSalary(employee);
+        EmployeeAction.minSalary(employee);
+        EmployeeAction.printAverageSalary(employee);
 
     }
 }
