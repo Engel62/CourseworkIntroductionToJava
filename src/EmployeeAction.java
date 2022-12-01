@@ -32,13 +32,14 @@ public class EmployeeAction {
         System.out.println("Минимальная зарплата  " + minSalary);
     }
     public static double averageSalary(Employee[] employee) {
-        double averageSalary = 0;
+        double averageSalary;
+        int elementCount =0;
         for (int i = 0; i < employee.length; i++) {
             if (employee[i] != null) {
-                averageSalary = EmployeeAction.sum(employee) / employee.length;
+                elementCount ++;
             }
         }
-        return  averageSalary;
+        return  EmployeeAction.sum(employee) / elementCount;
     }
 
     public static void printAverageSalary(Employee[] employee) {
